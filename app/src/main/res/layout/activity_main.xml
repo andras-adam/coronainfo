@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/coronaInfo"
-        android:textColor="#FFFFFFFF"
+        android:textColor="#CCFFFFFF"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/planetEarth"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <TextView
         android:id="@+id/textView"
@@ -32,13 +32,12 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/planetEarth"
-        android:layout_width="134dp"
-        android:layout_height="90dp"
+        android:layout_width="176dp"
+        android:layout_height="144dp"
         android:layout_marginTop="232dp"
         android:contentDescription="@string/imageContent"
         app:layout_constraintEnd_toEndOf="parent"

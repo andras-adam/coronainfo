@@ -3,4 +3,10 @@
     <string name="coronaInfo">Coronainfo</string>
     <string name="source">Powered by COVID-19 API</string>
     <string name="imageContent">Earth</string>
+    <string name="search_button">Search button</string>
+    <string name="country">Country…</string>
+    <string name="european_union">European Union</string>
+    <string name="deceased">Deceased: 473 139</string>
+    <string name="recovered">Recovered: 15 643 847</string>
+    <string name="total_cases">Total cases: 19 727 693</string>
 </resources>
