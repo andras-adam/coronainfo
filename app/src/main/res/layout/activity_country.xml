@@ -73,9 +73,10 @@
         android:progressTint="#A6FF8D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countryName"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintVertical_bias="0.178" />
 
     <TextView
         android:id="@+id/textView5"
@@ -142,6 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
         app:layout_constraintVertical_bias="0.279" />
 
+
     <ProgressBar
         android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyleHorizontal"
@@ -154,9 +156,10 @@
         android:progressTint="#FF5B5B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countryName"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <TextView
         android:id="@+id/deceased"
@@ -166,10 +169,9 @@
         android:text="@string/deceased"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
-
 
     <TextView
         android:id="@+id/deceased_number"
@@ -233,10 +235,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/forecast"
         app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="@+id/forecast"
         app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <TextView
         android:id="@+id/firstWeekForecast"
@@ -246,10 +248,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/forecast"
         app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="@+id/forecast"
         app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.411" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <TextView
         android:id="@+id/firstWeekForecastNumbers"
@@ -259,10 +261,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/forecast"
         app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="@+id/forecast"
         app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.411" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <TextView
         android:id="@+id/secondWeekForecastNumber"
@@ -272,10 +274,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/forecast"
         app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="@+id/forecast"
         app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.741" />
 
     <TextView
         android:id="@+id/pastTwoWeeksNumbers"
@@ -338,10 +340,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
         app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="@+id/currentStatus"
         app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.847" />
+        app:layout_constraintVertical_bias="0.855" />
 
     <TextView
         android:id="@+id/newCases"

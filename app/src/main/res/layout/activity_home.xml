@@ -286,7 +286,7 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/summery"
         app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="@+id/summery"
         app:layout_constraintTop_toTopOf="@+id/summery"
         app:layout_constraintVertical_bias="0.678" />
@@ -390,7 +390,7 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/summery"
         app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="@+id/summery"
         app:layout_constraintTop_toTopOf="@+id/summery"
         app:layout_constraintVertical_bias="0.213" />
