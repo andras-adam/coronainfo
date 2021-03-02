@@ -52,7 +52,7 @@
         android:id="@+id/countryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="United States"
+        android:text="@string/search_country"
         android:textColor="#CCFFFFFF"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,6 +89,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
 
+    <TextView
+        android:id="@+id/recoveredNumber"
+        android:layout_width="127dp"
+        android:layout_height="17dp"
+        android:text="@string/recovered_number"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        app:layout_constraintVertical_bias="0.266" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
@@ -106,7 +118,7 @@
         app:layout_constraintVertical_bias="0.062" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/totalCases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -116,6 +128,19 @@
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/totalCasesNumber"
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:text="@string/total_cases_number"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toEndOf="@+id/totalCases"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.279" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
@@ -134,7 +159,7 @@
         app:layout_constraintVertical_bias="0.309" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/deceased"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -145,188 +170,203 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
 
+
+    <TextView
+        android:id="@+id/deceased_number"
+        android:layout_width="116dp"
+        android:layout_height="21dp"
+        android:text="@string/deceased_number"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/deceased"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar3"
+        app:layout_constraintVertical_bias="0.363" />
+
     <View
-        android:id="@+id/view2"
+        android:id="@+id/currentStatus"
         android:layout_width="302dp"
         android:layout_height="157dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="188dp"
         android:background="@drawable/bg_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/deceased"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/forecast"
         android:layout_width="303dp"
         android:layout_height="143dp"
         android:layout_marginTop="44dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/bg_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintTop_toBottomOf="@+id/currentStatus"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/predictions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Predictions"
+        android:text="@string/predictions"
         android:textColor="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast"
+        app:layout_constraintEnd_toEndOf="@+id/forecast"
         app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/forecast"
+        app:layout_constraintTop_toTopOf="@+id/forecast"
         app:layout_constraintVertical_bias="0.1" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/secondWeekForecast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second week"
+        android:text="@string/Second_week_forecast"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast"
+        app:layout_constraintEnd_toEndOf="@+id/forecast"
         app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/forecast"
+        app:layout_constraintTop_toTopOf="@+id/forecast"
         app:layout_constraintVertical_bias="0.758" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/firstWeekForecast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First week"
+        android:text="@string/First_week_forecast"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast"
+        app:layout_constraintEnd_toEndOf="@+id/forecast"
         app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/forecast"
+        app:layout_constraintTop_toTopOf="@+id/forecast"
         app:layout_constraintVertical_bias="0.411" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/firstWeekForecastNumbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3 576"
+        android:text="@string/First_week_forecast_Number"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast"
+        app:layout_constraintEnd_toEndOf="@+id/forecast"
         app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/forecast"
+        app:layout_constraintTop_toTopOf="@+id/forecast"
         app:layout_constraintVertical_bias="0.411" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/secondWeekForecastNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3 892"
+        android:text="@string/Second_week_forecast_Number"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/forecast"
+        app:layout_constraintEnd_toEndOf="@+id/forecast"
         app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/forecast"
+        app:layout_constraintTop_toTopOf="@+id/forecast"
         app:layout_constraintVertical_bias="0.758" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/pastTwoWeeksNumbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Past two weeks"
+        android:text="@string/Past_two_weeks"
         android:textColor="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.09" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/recoveries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recoveries"
+        android:text="@string/Recoveries"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.594" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/recoveriesNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1 297"
+        android:text="@string/recoveries_number"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.586" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/deaths"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deaths"
+        android:text="@string/Deaths"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.855" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/deathsNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="384"
+        android:text="@string/Deaths_number"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.847" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/newCases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New cases"
+        android:text="@string/new_cases"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.34" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/newCasesNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2 341"
+        android:text="@string/new_cases_number"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
         app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/currentStatus"
+        app:layout_constraintTop_toTopOf="@+id/currentStatus"
         app:layout_constraintVertical_bias="0.34" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
