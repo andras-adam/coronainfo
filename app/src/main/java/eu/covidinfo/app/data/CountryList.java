@@ -12,7 +12,7 @@ import java.util.Set;
 public class CountryList {
 
     // Singleton instance of CountryList
-    private static final CountryList singleton = new CountryList();
+    private static CountryList singleton;
 
     // HashMap to hold all of the countries
     private final HashMap<String, String> countryList = new HashMap<>();
@@ -22,6 +22,9 @@ public class CountryList {
 
     // Return the CountryList singleton instance
     public static CountryList get() {
+        if (CountryList.singleton == null) {
+             singleton = new CountryList();
+        }
         return CountryList.singleton;
     }
 
