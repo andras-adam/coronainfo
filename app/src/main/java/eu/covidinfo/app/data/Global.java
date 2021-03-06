@@ -73,7 +73,7 @@ public class Global {
     @NotNull
     @Override
     public String toString() {
-        return "Global {" +
+        return "Global { " +
                 "cases=" + this.cases +
                 ", deaths=" + this.deaths +
                 ", recovered=" + this.recovered +

@@ -103,7 +103,7 @@ public class Country {
     @NotNull
     @Override
     public String toString() {
-        return "Country {" +
+        return "Country { " +
                 "name='" + this.name + "'" +
                 ", code='" + this.code + "'" +
                 ", population=" + this.population +
