@@ -31,17 +31,6 @@ public class CountryActivity extends AppCompatActivity {
         // Update UI widgets
         this.updateTextViews();
         this.updateProgressBars();
-
-        // Set up listener to navigate to search screen
-        this.searchClickListener();
-    }
-
-    private void searchClickListener() {
-        View view = findViewById(R.id.viewSearch);
-        view.setOnClickListener(target -> {
-            Intent intent = new Intent(this, SearchActivity.class);
-            startActivity(intent);
-        });
     }
 
     // Format numbers into display-ready numbers
