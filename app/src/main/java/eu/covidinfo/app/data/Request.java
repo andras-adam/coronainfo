@@ -3,13 +3,14 @@ package eu.covidinfo.app.data;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonSyntaxException;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
@@ -22,7 +23,7 @@ public class Request {
 
     // Initiate Gson, OkHttp and executor, and set access token
     private static final Gson gson = new Gson();
-    private static final OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = new OkHttpClient.Builder().callTimeout(10, TimeUnit.SECONDS).build();
     private static final ExecutorService executor = Executors.newCachedThreadPool();
     private static final String XAccessToken = "5cf9dfd5-3449-485e-b5ae-70a60e997864";
 
@@ -32,10 +33,10 @@ public class Request {
     }
 
     // Parse the json response into the provided type
-    public <T> T getAs(TypeToken<T> type) {
+    public JsonElement get() {
         try {
             String response = this.getFutureResponse().get();
-            return Request.gson.fromJson(response, type.getType());
+            return Request.gson.fromJson(response, JsonElement.class);
         } catch (ExecutionException | InterruptedException | JsonSyntaxException e) {
             Log.e("REQUEST", e.toString());
             return null;

@@ -2,9 +2,11 @@ package eu.covidinfo.app.data;
 
 import androidx.annotation.Nullable;
 
-import com.google.gson.reflect.TypeToken;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Set;
@@ -17,43 +19,54 @@ public class CountryList {
     // HashMap to hold all of the countries
     private final HashMap<String, String> countryList = new HashMap<>();
 
-    // API response type
-    private static final TypeToken<ArrayList<HashMap<String, String>>> RESPONSE_TYPE = new TypeToken<ArrayList<HashMap<String, String>>>(){};
-
     // Return the CountryList singleton instance
     public static CountryList get() {
         if (CountryList.singleton == null) {
-             singleton = new CountryList();
+            CountryList.singleton = new CountryList();
         }
         return CountryList.singleton;
     }
 
     // CountryList constructor
     private CountryList() {
-        this.fetchCountryList();
+        this.getDataFromAPI();
     }
 
-    // Fetch the list of countries from API
-    private void fetchCountryList() {
-        ArrayList<HashMap<String, String>> response = new Request("https://api.covid19api.com/countries").getAs(RESPONSE_TYPE);
-        for (HashMap<String, String> map : response) {
-            String country = map.get("Country");
-            String slug = map.get("Slug");
-            if (slug != null && country != null) {
-                this.countryList.put(slug.toLowerCase(), country.toLowerCase());
+    // Load and parse data from API
+    private void getDataFromAPI() {
+
+        // API endpoint URL
+        String url = "https://restcountries.eu/rest/v2/all";
+
+        // Run API request
+        JsonElement response = new Request(url).get();
+
+        // Parse API response
+        if (response != null) {
+            JsonArray root = response.getAsJsonArray();
+            for (JsonElement item : root) {
+                JsonObject country = item.getAsJsonObject();
+                String code = country.get("alpha2Code").getAsString();
+                String name = country.get("name").getAsString();
+                this.countryList.put(code.toLowerCase(), name);
             }
         }
     }
 
-    // Get the country's name by it's slug
+    // Get the country's name by it's code
     @Nullable
-    public String getBySlug(String slug) {
-        return this.countryList.get(slug);
+    public String get(String code) {
+        return this.countryList.get(code);
     }
 
-    // Get the set of country slugs
-    public Set<String> slugs() {
+    // Get the set of country codes
+    public Set<String> keys() {
         return Collections.unmodifiableSet(this.countryList.keySet());
+    }
+
+    // Get the collection of country names
+    public Collection<String> values() {
+        return Collections.unmodifiableCollection(this.countryList.values());
     }
 
 }
