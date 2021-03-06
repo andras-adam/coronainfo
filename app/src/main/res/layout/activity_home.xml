@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +8,10 @@
     android:background="#2D3646"
     tools:context=".CountryActivity">
 
+    <!-- SEARCHBAR -->
+
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewSearch"
         android:layout_width="296dp"
         android:layout_height="45dp"
         android:background="@drawable/bg_search"
@@ -20,39 +23,41 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <ImageView
-        android:id="@+id/searchButton"
+        android:id="@+id/iconSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/search_button"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
         app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/viewSearch"
+        app:layout_constraintTop_toTopOf="@+id/viewSearch"
         app:layout_constraintVertical_bias="0.523"
         app:srcCompat="@drawable/ic_search_24px" />
 
     <EditText
-        android:id="@+id/country"
+        android:id="@+id/editSearch"
         android:layout_width="202dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="@string/country"
+        android:hint="@string/search_hint"
         android:importantForAutofill="no"
         android:inputType="text"
         android:textColor="#99FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
+        app:layout_constraintStart_toStartOf="@+id/viewSearch"
+        app:layout_constraintTop_toTopOf="@+id/viewSearch"
         tools:ignore="LabelFor" />
 
+    <!-- SCREEN TITLE -->
+
     <TextView
-        android:id="@+id/countryName"
+        android:id="@+id/textScreenTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coronaInfo"
+        android:text="@string/app_name"
         android:textColor="#CCFFFFFF"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,50 +66,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.147" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="300dp"
-        android:layout_height="10dp"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="75"
-        android:progressBackgroundTint="#3D4953"
-        android:progressTint="#A6FF8D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryName"
-        app:layout_constraintVertical_bias="0.184" />
-
-    <TextView
-        android:id="@+id/globalRecovered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/global_recovered"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
-
-
-    <TextView
-        android:id="@+id/globalRecoveredNumber"
-        android:layout_width="118dp"
-        android:layout_height="16dp"
-        android:text="@string/global_recovered_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/globalRecovered"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
-        app:layout_constraintVertical_bias="0.285" />
+    <!--  TOTAL CONFIRMED  -->
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressTotalConfirmed"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="300dp"
         android:layout_height="10dp"
@@ -116,283 +81,230 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryName"
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
         app:layout_constraintVertical_bias="0.062" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textTotalConfirmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/global_cases"
+        android:text="@string/total_confirmed"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
-
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed" />
 
     <TextView
-        android:id="@+id/globalCasesNumber"
+        android:id="@+id/numberTotalConfirmed"
         android:layout_width="120dp"
         android:layout_height="17dp"
-        android:text="@string/global_cases_number"
+        android:text="@string/number_placeholder"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintBottom_toTopOf="@+id/progressTotalRecovered"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toEndOf="@+id/textTotalConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <!-- TOTAL RECOVERED -->
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressTotalRecovered"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="300dp"
         android:layout_height="10dp"
         android:indeterminate="false"
         android:max="100"
-        android:progress="5"
+        android:progress="50"
+        android:progressBackgroundTint="#3D4953"
+        android:progressTint="#A6FF8D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
+        app:layout_constraintVertical_bias="0.184" />
+
+    <TextView
+        android:id="@+id/textTotalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/total_recovered"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered" />
+
+    <TextView
+        android:id="@+id/numberTotalRecovered"
+        android:layout_width="118dp"
+        android:layout_height="16dp"
+        android:text="@string/number_placeholder"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/progressTotalDeaths"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toEndOf="@+id/textTotalRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <!-- TOTAL DEATHS -->
+
+    <ProgressBar
+        android:id="@+id/progressTotalDeaths"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
         android:progressBackgroundTint="#3D4953"
         android:progressTint="#FF5B5B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryName"
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
         app:layout_constraintVertical_bias="0.309" />
 
     <TextView
-        android:id="@+id/globalDeaths"
+        android:id="@+id/textTotalDeaths"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/global_deaths"
+        android:text="@string/total_deaths"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
 
     <TextView
-        android:id="@+id/globalDeathsNumber"
+        android:id="@+id/numberTotalDeaths"
         android:layout_width="116dp"
         android:layout_height="18dp"
-        android:text="@string/global_deaths_number"
+        android:layout_marginTop="12dp"
+        android:text="@string/number_placeholder"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/summery"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toEndOf="@+id/globalDeaths"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
+
+    <!-- NEW CASES -->
 
     <View
-        android:id="@+id/summery"
-        android:layout_width="304dp"
-        android:layout_height="333dp"
+        android:id="@+id/viewNewCases"
+        android:layout_width="300dp"
+        android:layout_height="217dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/bg_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/globalDeaths"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
 
     <TextView
-        android:id="@+id/comparison"
+        android:id="@+id/textNewConfirmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/highest_cases"
+        android:text="@string/new_confirmed"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <TextView
+        android:id="@+id/textNewRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_recovered"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <TextView
+        android:id="@+id/textNewDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_deaths"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.762" />
+
+    <TextView
+        android:id="@+id/numberNewRecovered"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/number_placeholder"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <TextView
+        android:id="@+id/numberNewConfirmed"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/number_placeholder"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <TextView
+        android:id="@+id/numberNewDeaths"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/number_placeholder"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.762" />
+
+    <TextView
+        android:id="@+id/textNewCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_cases"
         android:textColor="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <TextView
-        android:id="@+id/highest1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_1"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.337" />
-
-    <TextView
-        android:id="@+id/highest1Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_1_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.334" />
-
-    <TextView
-        android:id="@+id/highest2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_2"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.449" />
-
-    <TextView
-        android:id="@+id/highest2Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_2_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.445" />
-
-    <TextView
-        android:id="@+id/highest3Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_3_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.557" />
-
-    <TextView
-        android:id="@+id/highest4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_4"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.678" />
-
-    <TextView
-        android:id="@+id/highest6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_6"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.126"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.901" />
-
-    <TextView
-        android:id="@+id/highest5Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_5_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.792" />
-
-    <TextView
-        android:id="@+id/highest5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_5"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.792" />
-
-    <TextView
-        android:id="@+id/highest6Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_6_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.898" />
-
-    <TextView
-        android:id="@+id/highest4Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_4_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.678" />
-
-    <TextView
-        android:id="@+id/highest3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/highest_3"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.56" />
-
-    <TextView
-        android:id="@+id/searchedCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_country"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.213" />
-
-    <TextView
-        android:id="@+id/searchCountryNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_country_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/summery"
-        app:layout_constraintEnd_toEndOf="@+id/summery"
-        app:layout_constraintHorizontal_bias="0.772"
-        app:layout_constraintStart_toStartOf="@+id/summery"
-        app:layout_constraintTop_toTopOf="@+id/summery"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
+        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
+        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintVertical_bias="0.098" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
