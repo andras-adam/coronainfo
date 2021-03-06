@@ -1,59 +1,21 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="coronaInfo">Coronainfo</string>
-    <string name="source">Powered by COVID-19 API</string>
-    <string name="imageContent">Earth</string>
+    <string name="app_name">Coronainfo</string>
+    <string name="app_logo">Earth</string>
     <string name="search_button">Search button</string>
-    <string name="country">Country…</string>
-    <string name="european_union">European Union</string>
-    <string name="deceased">Deceased:</string>
-    <string name="deceased_number">121212</string>
-    <string name="recovered">Recovered:</string>
-    <string name="recovered_number">12323423</string>
-    <string name="total_cases">Total cases: </string>
-    <string name="total_cases_number">1234567 </string>
-    <string name="search_country">Country Name</string>
-    <string name="search_country_number">12121</string>
-    <string name="Past_two_weeks">Past two weeks</string>
-    <string name="new_cases">New cases</string>
-    <string name="new_cases_number">1222</string>
-    <string name="Recoveries">Recoveries</string>
-    <string name="recoveries_number">1222</string>
-    <string name="Deaths">Deaths</string>
-    <string name="Deaths_number">122</string>
-    <string name="First_week_forecast">First Week Forecast</string>
-    <string name="First_week_forecast_Number">2323</string>
-    <string name="Second_week_forecast">First Week Forecast</string>
-    <string name="Second_week_forecast_Number">2323</string>
-    <string name="predictions">Predictions</string>
-    <string name="last_searched_1">last searched 1</string>
-    <string name="last_searched_2">last searched 2</string>
-    <string name="last_searched_3">last searched 3</string>
-    <string name="cancel_sign3">cancel3</string>
-    <string name="cancel_sign2">cancel2</string>
-    <string name="cancel_sign1">cancel1</string>
-    <string name="global_cases">Global cases:</string>
-    <string name="global_cases_number"> 1 000 000</string>
-    <string name="global_recovered">Global recovered:</string>
-    <string name="global_recovered_number">1 000 000</string>
-    <string name="global_deaths">Global deaths:</string>
-    <string name="global_deaths_number">1 000 </string>
-    <string name="highest_cases">Highest cases</string>
-    <string name="highest_1">highest 1</string>
-    <string name="highest_1_number">1 000 000</string>
-    <string name="highest_2">highest 2</string>
-    <string name="highest_2_number">1 000 000</string>
-    <string name="highest_3">highest 3</string>
-    <string name="highest_3_number">1 000 000</string>
-    <string name="highest_4">highest 4</string>
-    <string name="highest_4_number">1 000 000</string>
-    <string name="highest_5">highest 5</string>
-    <string name="highest_5_number">1 000 000</string>
-    <string name="highest_6">highest 6</string>
-    <string name="highest_6_number">1 000 000</string>
-
-
-
-
-    
+    <string name="search_hint">Country…</string>
+    <string name="total_confirmed">Total confirmed:</string>
+    <string name="total_recovered">Total recovered:</string>
+    <string name="total_deaths">Total deaths:</string>
+    <string name="total_critical">Total critical:</string>
+    <string name="placeholder_number">0</string>
+    <string name="placeholder_country">country_name</string>
+    <string name="statistics_title">Statistics</string>
+    <string name="statistics_death_rate">Death rate (%)</string>
+    <string name="statistics_recovery_rate">Recovery rate (%)</string>
+    <string name="statistics_cases_per_million">Cases per million</string>
+    <string name="statistics_population">Population</string>
+    <string name="latest_title">Latest cases</string>
+    <string name="latest_new_deaths">New deaths</string>
+    <string name="latest_new_recovered">New recovered</string>
+    <string name="latest_new_confirmed">New confirmed</string>
 </resources>
