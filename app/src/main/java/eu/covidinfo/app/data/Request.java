@@ -23,9 +23,8 @@ public class Request {
 
     // Initiate Gson, OkHttp and executor, and set access token
     private static final Gson gson = new Gson();
-    private static final OkHttpClient client = new OkHttpClient.Builder().callTimeout(10, TimeUnit.SECONDS).build();
     private static final ExecutorService executor = Executors.newCachedThreadPool();
-    private static final String XAccessToken = "5cf9dfd5-3449-485e-b5ae-70a60e997864";
+    private static final OkHttpClient client = new OkHttpClient.Builder().callTimeout(10, TimeUnit.SECONDS).build();
 
     // Request constructor
     public Request(String url) {
@@ -46,7 +45,7 @@ public class Request {
     // Run http request and return response
     private CompletableFuture<String> getFutureResponse() {
         return CompletableFuture.supplyAsync(() -> {
-            okhttp3.Request request = new okhttp3.Request.Builder().header("X-Access-Token", Request.XAccessToken).url(this.url).build();
+            okhttp3.Request request = new okhttp3.Request.Builder().url(this.url).build();
             try {
                 Response response = Request.client.newCall(request).execute();
                 ResponseBody body = response.body();
