@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,62 +8,10 @@
     android:background="#2D3646"
     tools:context=".CountryActivity">
 
-    <TextView
-        android:id="@+id/lastSearch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#CCFFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.191"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.19"
-        tools:text="@string/last_searched_3" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="24dp"
-        android:layout_height="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.752"
-        app:layout_constraintStart_toEndOf="@+id/lastSearch1"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.188"
-        app:srcCompat="@drawable/ic_close_24px"
-        android:contentDescription="@string/cancel_sign3" />
-
-    <TextView
-        android:id="@+id/lastSearch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#CCFFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.115"
-        tools:text="@string/last_searched_2" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="24dp"
-        android:layout_height="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.752"
-        app:layout_constraintStart_toEndOf="@+id/lastSearch1"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.115"
-        app:srcCompat="@drawable/ic_close_24px"
-        android:contentDescription="@string/cancel_sign2"/>
+    <!-- SEARCHBAR -->
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewSearch"
         android:layout_width="296dp"
         android:layout_height="45dp"
         android:background="@drawable/bg_search"
@@ -74,60 +23,32 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <ImageView
-        android:id="@+id/searchButton"
+        android:id="@+id/iconSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/search_button"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
         app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/viewSearch"
+        app:layout_constraintTop_toTopOf="@+id/viewSearch"
         app:layout_constraintVertical_bias="0.523"
         app:srcCompat="@drawable/ic_search_24px" />
 
     <EditText
-        android:id="@+id/country"
+        android:id="@+id/editSearch"
         android:layout_width="202dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="@string/country"
+        android:hint="@string/search_hint"
         android:importantForAutofill="no"
         android:inputType="text"
         android:textColor="#99FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        tools:ignore="LabelFor"
-        tools:text="@string/search_country" />
-
-    <TextView
-        android:id="@+id/lastSearch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#CCFFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.045"
-        tools:text="@string/last_searched_1" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="24dp"
-        android:layout_height="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.752"
-        app:layout_constraintStart_toEndOf="@+id/lastSearch1"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.044"
-        app:srcCompat="@drawable/ic_close_24px"
-        android:contentDescription="@string/cancel_sign1"/>
+        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
+        app:layout_constraintStart_toStartOf="@+id/viewSearch"
+        app:layout_constraintTop_toTopOf="@+id/viewSearch"
+        tools:ignore="LabelFor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
