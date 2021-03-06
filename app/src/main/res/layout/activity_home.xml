@@ -87,10 +87,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/total_confirmed"
+        android:text="@string/global_confirmed"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed" />
 
@@ -104,7 +104,7 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalRecovered"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toEndOf="@+id/textTotalConfirmed"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed"
         app:layout_constraintVertical_bias="0.0" />
@@ -132,10 +132,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/total_recovered"
+        android:text="@string/global_recovered"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered" />
 
@@ -149,7 +149,7 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalDeaths"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toEndOf="@+id/textTotalRecovered"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered"
         app:layout_constraintVertical_bias="0.0" />
@@ -177,10 +177,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/total_deaths"
+        android:text="@string/global_deaths"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
 

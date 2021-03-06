@@ -3,6 +3,9 @@
     <string name="app_logo">Earth</string>
     <string name="search_button">Search button</string>
     <string name="search_hint">Country…</string>
+    <string name="global_confirmed">Global confirmed:</string>
+    <string name="global_recovered">Global recovered:</string>
+    <string name="global_deaths">Global deaths:</string>
     <string name="total_confirmed">Total confirmed:</string>
     <string name="total_recovered">Total recovered:</string>
     <string name="total_deaths">Total deaths:</string>
