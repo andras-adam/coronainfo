@@ -19,9 +19,9 @@ public class Country {
     private int critical;
 
     // Calculated statistics
-    private double deathRate;
-    private double recoveryRate;
-    private double casesPerMillion;
+    private float deathRate;
+    private float recoveryRate;
+    private float casesPerMillion;
 
     // Country constructor
     public Country(String countryCode) {
@@ -56,15 +56,15 @@ public class Country {
         return this.critical;
     }
 
-    public double getDeathRate() {
+    public float getDeathRate() {
         return this.deathRate;
     }
 
-    public double getRecoveryRate() {
+    public float getRecoveryRate() {
         return this.recoveryRate;
     }
 
-    public double getCasesPerMillion() {
+    public float getCasesPerMillion() {
         return this.casesPerMillion;
     }
 
@@ -94,9 +94,9 @@ public class Country {
             this.recovered = latest.get("recovered").getAsInt();
             this.critical = latest.get("critical").getAsInt();
 
-            this.deathRate = calc.get("death_rate").getAsDouble();
-            this.recoveryRate = calc.get("recovery_rate").getAsDouble();
-            this.casesPerMillion = calc.get("cases_per_million_population").getAsDouble();
+            this.deathRate = calc.get("death_rate").getAsFloat();
+            this.recoveryRate = calc.get("recovery_rate").getAsFloat();
+            this.casesPerMillion = calc.get("cases_per_million_population").getAsFloat();
         }
     }
 

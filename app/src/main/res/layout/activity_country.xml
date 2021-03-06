@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +8,10 @@
     android:background="#2D3646"
     tools:context=".CountryActivity">
 
+    <!-- SEARCHBAR -->
+
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewSearch"
         android:layout_width="296dp"
         android:layout_height="45dp"
         android:background="@drawable/bg_search"
@@ -20,39 +23,41 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <ImageView
-        android:id="@+id/searchButton"
+        android:id="@+id/iconSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/search_button"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
         app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/viewSearch"
+        app:layout_constraintTop_toTopOf="@+id/viewSearch"
         app:layout_constraintVertical_bias="0.523"
         app:srcCompat="@drawable/ic_search_24px" />
 
     <EditText
-        android:id="@+id/country"
+        android:id="@+id/editSearch"
         android:layout_width="202dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="@string/country"
+        android:hint="@string/search_hint"
         android:importantForAutofill="no"
         android:inputType="text"
         android:textColor="#99FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
+        app:layout_constraintStart_toStartOf="@+id/viewSearch"
+        app:layout_constraintTop_toTopOf="@+id/viewSearch"
         tools:ignore="LabelFor" />
 
+    <!-- SCREEN TITLE -->
+
     <TextView
-        android:id="@+id/countryName"
+        android:id="@+id/textScreenTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/search_country"
+        android:text="@string/placeholder_country"
         android:textColor="#CCFFFFFF"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,49 +66,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.147" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="300dp"
-        android:layout_height="10dp"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="75"
-        android:progressBackgroundTint="#3D4953"
-        android:progressTint="#A6FF8D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryName"
-        app:layout_constraintVertical_bias="0.178" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/recovered"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
-
-    <TextView
-        android:id="@+id/recoveredNumber"
-        android:layout_width="127dp"
-        android:layout_height="17dp"
-        android:text="@string/recovered_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
-        app:layout_constraintVertical_bias="0.266" />
+    <!--  TOTAL CONFIRMED  -->
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressTotalConfirmed"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="300dp"
         android:layout_height="10dp"
@@ -115,260 +81,274 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryName"
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
         app:layout_constraintVertical_bias="0.062" />
 
     <TextView
-        android:id="@+id/totalCases"
+        android:id="@+id/textTotalConfirmed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/total_cases"
+        android:text="@string/total_confirmed"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed" />
+
+    <!-- TOTAL RECOVERED -->
 
     <TextView
-        android:id="@+id/totalCasesNumber"
-        android:layout_width="129dp"
-        android:layout_height="18dp"
-        android:text="@string/total_cases_number"
+        android:id="@+id/numberTotalConfirmed"
+        android:layout_width="120dp"
+        android:layout_height="17dp"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintBottom_toTopOf="@+id/progressTotalRecovered"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toEndOf="@+id/totalCases"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.279" />
-
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toEndOf="@+id/textTotalConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed"
+        app:layout_constraintVertical_bias="0.259" />
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressTotalRecovered"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="300dp"
         android:layout_height="10dp"
         android:indeterminate="false"
         android:max="100"
-        android:progress="5"
+        android:progress="50"
+        android:progressBackgroundTint="#3D4953"
+        android:progressTint="#A6FF8D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
+        app:layout_constraintVertical_bias="0.184" />
+
+    <TextView
+        android:id="@+id/textTotalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/total_recovered"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered" />
+
+    <!-- TOTAL DEATHS -->
+
+    <TextView
+        android:id="@+id/numberTotalRecovered"
+        android:layout_width="118dp"
+        android:layout_height="16dp"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/progressTotalDeaths"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/textTotalRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <ProgressBar
+        android:id="@+id/progressTotalDeaths"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
         android:progressBackgroundTint="#3D4953"
         android:progressTint="#FF5B5B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryName"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
+        app:layout_constraintVertical_bias="0.309" />
 
     <TextView
-        android:id="@+id/deceased"
+        android:id="@+id/textTotalDeaths"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/deceased"
+        android:text="@string/total_deaths"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
+
+    <!-- TOTAL CRITICAL -->
 
     <TextView
-        android:id="@+id/deceased_number"
+        android:id="@+id/numberTotalDeaths"
         android:layout_width="116dp"
-        android:layout_height="21dp"
-        android:text="@string/deceased_number"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/currentStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
+
+    <ProgressBar
+        android:id="@+id/progressTotalCritical"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="20"
+        android:progressBackgroundTint="#3D4953"
+        android:progressTint="#AD4BBD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
+        app:layout_constraintVertical_bias="0.427" />
+
+    <TextView
+        android:id="@+id/textTotalCritical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/total_critical"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalCritical" />
+
+    <!-- STATISTICS -->
+
+    <TextView
+        android:id="@+id/numberTotalCritical"
+        android:layout_width="116dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalCritical" />
+
+    <View
+        android:id="@+id/viewStatistics"
+        android:layout_width="300dp"
+        android:layout_height="217dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bg_card"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toEndOf="@+id/deceased"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3"
-        app:layout_constraintVertical_bias="0.363" />
-
-    <View
-        android:id="@+id/currentStatus"
-        android:layout_width="302dp"
-        android:layout_height="157dp"
-        android:layout_marginBottom="188dp"
-        android:background="@drawable/bg_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deceased"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <View
-        android:id="@+id/forecast"
-        android:layout_width="303dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="44dp"
-        android:background="@drawable/bg_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
 
     <TextView
-        android:id="@+id/predictions"
+        android:id="@+id/textStatistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/predictions"
+        android:text="@string/statistics_title"
         android:textColor="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/forecast"
-        app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="@+id/forecast"
-        app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
-        android:id="@+id/secondWeekForecast"
+        android:id="@+id/textDeathRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Second_week_forecast"
+        android:text="@string/statistics_death_rate"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/forecast"
-        app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="@+id/forecast"
-        app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.313" />
 
     <TextView
-        android:id="@+id/firstWeekForecast"
-        android:layout_width="wrap_content"
+        android:id="@+id/numberDeathRate"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/First_week_forecast"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/forecast"
-        app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="@+id/forecast"
-        app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.403" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.308" />
 
     <TextView
-        android:id="@+id/firstWeekForecastNumbers"
+        android:id="@+id/textRecoveryRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/First_week_forecast_Number"
+        android:text="@string/statistics_recovery_rate"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/forecast"
-        app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.841"
-        app:layout_constraintStart_toStartOf="@+id/forecast"
-        app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.403" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.54" />
 
     <TextView
-        android:id="@+id/secondWeekForecastNumber"
-        android:layout_width="wrap_content"
+        android:id="@+id/numberRecoveryRate"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/Second_week_forecast_Number"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/forecast"
-        app:layout_constraintEnd_toEndOf="@+id/forecast"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="@+id/forecast"
-        app:layout_constraintTop_toTopOf="@+id/forecast"
-        app:layout_constraintVertical_bias="0.741" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.54" />
 
     <TextView
-        android:id="@+id/pastTwoWeeksNumbers"
+        android:id="@+id/textCasesPerMillion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Past_two_weeks"
+        android:text="@string/statistics_cases_per_million"
         android:textColor="#CCFFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.762" />
 
     <TextView
-        android:id="@+id/recoveries"
-        android:layout_width="wrap_content"
+        android:id="@+id/numberCasesPerMillion"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/Recoveries"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.594" />
-
-    <TextView
-        android:id="@+id/recoveriesNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recoveries_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.586" />
-
-    <TextView
-        android:id="@+id/deaths"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Deaths"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.855" />
-
-    <TextView
-        android:id="@+id/deathsNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Deaths_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.82"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.855" />
-
-    <TextView
-        android:id="@+id/newCases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/new_cases"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.34" />
-
-    <TextView
-        android:id="@+id/newCasesNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/new_cases_number"
-        android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/currentStatus"
-        app:layout_constraintEnd_toEndOf="@+id/currentStatus"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="@+id/currentStatus"
-        app:layout_constraintTop_toTopOf="@+id/currentStatus"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.762" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
