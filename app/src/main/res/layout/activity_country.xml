@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -246,15 +245,14 @@
     <View
         android:id="@+id/viewStatistics"
         android:layout_width="300dp"
-        android:layout_height="217dp"
-        android:layout_marginTop="44dp"
+        android:layout_height="250dp"
         android:background="@drawable/bg_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintTop_toBottomOf="@+id/progressTotalCritical"
+        app:layout_constraintVertical_bias="0.558" />
 
     <TextView
         android:id="@+id/textStatistics"
@@ -265,10 +263,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
         app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
         android:id="@+id/textDeathRate"
@@ -278,10 +276,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
         app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/numberDeathRate"
@@ -292,10 +290,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
         app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/textRecoveryRate"
@@ -305,10 +303,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
         app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <TextView
         android:id="@+id/numberRecoveryRate"
@@ -319,10 +317,10 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
         app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <TextView
         android:id="@+id/textCasesPerMillion"
@@ -335,7 +333,7 @@
         app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.658" />
 
     <TextView
         android:id="@+id/numberCasesPerMillion"
@@ -346,9 +344,36 @@
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
         app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toStartOf="@+id/viewStatistics"
         app:layout_constraintTop_toTopOf="@+id/viewStatistics"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.658" />
+
+    <TextView
+        android:id="@+id/textPopulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/statistics_population"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.848" />
+
+    <TextView
+        android:id="@+id/numberPopulation"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_number"
+        android:textAlignment="viewEnd"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
+        app:layout_constraintVertical_bias="0.844" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

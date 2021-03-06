@@ -55,16 +55,18 @@ public class CountryActivity extends AppCompatActivity {
         TextView deathRate = findViewById(R.id.numberDeathRate);
         TextView recoveryRate = findViewById(R.id.numberRecoveryRate);
         TextView casesPerMillion = findViewById(R.id.numberCasesPerMillion);
+        TextView population = findViewById(R.id.numberPopulation);
 
         // Update TextViews
         countryName.setText(String.format("%s (%s)", this.data.getName(), this.data.getCode()));
-        totalConfirmed.setText(format(this.data.getCases()));
-        totalRecovered.setText(format(this.data.getRecovered()));
-        totalDeaths.setText(format(this.data.getDeaths()));
-        totalCritical.setText(format(this.data.getCritical()));
-        deathRate.setText(format(this.data.getDeathRate()));
-        recoveryRate.setText(format(this.data.getRecoveryRate()));
-        casesPerMillion.setText(format(this.data.getCasesPerMillion()));
+        totalConfirmed.setText(this.format(this.data.getCases()));
+        totalRecovered.setText(this.format(this.data.getRecovered()));
+        totalDeaths.setText(this.format(this.data.getDeaths()));
+        totalCritical.setText(this.format(this.data.getCritical()));
+        deathRate.setText(this.format(this.data.getDeathRate()));
+        recoveryRate.setText(this.format(this.data.getRecoveryRate()));
+        casesPerMillion.setText(this.format(this.data.getCasesPerMillion()));
+        population.setText(this.format(this.data.getPopulation()));
     }
 
     // Update ProgressBar widgets
