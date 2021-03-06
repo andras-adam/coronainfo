@@ -2,7 +2,9 @@ package eu.covidinfo.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -25,6 +27,17 @@ public class HomeActivity extends AppCompatActivity {
         // Update UI widgets
         this.updateTextViews();
         this.updateProgressBars();
+
+        // Set up listener to navigate to search screen
+        this.searchClickListener();
+    }
+
+    private void searchClickListener() {
+        View view = findViewById(R.id.viewSearch);
+        view.setOnClickListener(target -> {
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+        });
     }
 
     // Update TextView widgets

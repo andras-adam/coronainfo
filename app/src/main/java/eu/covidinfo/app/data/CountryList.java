@@ -1,15 +1,13 @@
 package eu.covidinfo.app.data;
 
-import androidx.annotation.Nullable;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Set;
+import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class CountryList {
 
@@ -17,10 +15,11 @@ public class CountryList {
     private static CountryList singleton;
 
     // HashMap to hold all of the countries
-    private final HashMap<String, String> countryList = new HashMap<>();
+    private final List<String> codes = new ArrayList<>();
+    private final List<String> names = new ArrayList<>();
 
     // Return the CountryList singleton instance
-    public static CountryList get() {
+    public static CountryList getInstance() {
         if (CountryList.singleton == null) {
             CountryList.singleton = new CountryList();
         }
@@ -43,30 +42,34 @@ public class CountryList {
 
         // Parse API response
         if (response != null) {
+
+            // Extract useful data from response
             JsonArray root = response.getAsJsonArray();
+            List<Map.Entry<String, String>> list = new ArrayList<>();
             for (JsonElement item : root) {
                 JsonObject country = item.getAsJsonObject();
-                String code = country.get("alpha2Code").getAsString();
                 String name = country.get("name").getAsString();
-                this.countryList.put(code.toLowerCase(), name);
+                String code = country.get("alpha2Code").getAsString().toLowerCase();
+                list.add(new AbstractMap.SimpleEntry<>(code, name));
             }
+
+            // Sort data by country name
+            list.sort((s0, s1) -> s0.getValue().compareToIgnoreCase(s1.getValue()));
+            list.forEach(item -> {
+                this.codes.add(item.getKey());
+                this.names.add(item.getValue());
+            });
         }
     }
 
-    // Get the country's name by it's code
-    @Nullable
-    public String get(String code) {
-        return this.countryList.get(code);
+    // Get the list of country codes
+    public List<String> keys() {
+        return this.codes;
     }
 
-    // Get the set of country codes
-    public Set<String> keys() {
-        return Collections.unmodifiableSet(this.countryList.keySet());
-    }
-
-    // Get the collection of country names
-    public Collection<String> values() {
-        return Collections.unmodifiableCollection(this.countryList.values());
+    // Get the list of country names
+    public List<String> values() {
+        return this.names;
     }
 
 }

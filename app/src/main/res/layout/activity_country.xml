@@ -34,21 +34,19 @@
         app:layout_constraintVertical_bias="0.523"
         app:srcCompat="@drawable/ic_search_24px" />
 
-    <EditText
-        android:id="@+id/editSearch"
-        android:layout_width="202dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:hint="@string/search_hint"
-        android:importantForAutofill="no"
-        android:inputType="text"
+    <TextView
+        android:id="@+id/textSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_hint"
         android:textColor="#99FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
         app:layout_constraintEnd_toEndOf="@+id/viewSearch"
+        app:layout_constraintHorizontal_bias="0.242"
         app:layout_constraintStart_toStartOf="@+id/viewSearch"
         app:layout_constraintTop_toTopOf="@+id/viewSearch"
-        tools:ignore="LabelFor" />
+        app:layout_constraintVertical_bias="0.458" />
 
     <!-- SCREEN TITLE -->
 

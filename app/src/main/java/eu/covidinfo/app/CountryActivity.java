@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ public class CountryActivity extends AppCompatActivity {
 
         // Get countryCode from the intent
         Intent intent = getIntent();
-        String countryCode = intent.getStringExtra(MainActivity.EXTRA_COUNTRY_CODE);
+        String countryCode = intent.getStringExtra(SearchActivity.EXTRA_COUNTRY_CODE);
 
         // Get country data
         data = new Country(countryCode);
@@ -30,6 +31,17 @@ public class CountryActivity extends AppCompatActivity {
         // Update UI widgets
         this.updateTextViews();
         this.updateProgressBars();
+
+        // Set up listener to navigate to search screen
+        this.searchClickListener();
+    }
+
+    private void searchClickListener() {
+        View view = findViewById(R.id.viewSearch);
+        view.setOnClickListener(target -> {
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+        });
     }
 
     // Format numbers into display-ready numbers

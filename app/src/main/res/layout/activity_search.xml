@@ -8,47 +8,14 @@
     android:background="#2D3646"
     tools:context=".CountryActivity">
 
-    <!-- SEARCHBAR -->
-
-    <View
-        android:id="@+id/viewSearch"
-        android:layout_width="296dp"
-        android:layout_height="45dp"
-        android:background="@drawable/bg_search"
+    <ListView
+        android:id="@+id/listCountries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
-
-    <ImageView
-        android:id="@+id/iconSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/search_button"
-        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
-        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="@+id/viewSearch"
-        app:layout_constraintTop_toTopOf="@+id/viewSearch"
-        app:layout_constraintVertical_bias="0.523"
-        app:srcCompat="@drawable/ic_search_24px" />
-
-    <EditText
-        android:id="@+id/editSearch"
-        android:layout_width="202dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:hint="@string/search_hint"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:textColor="#99FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
-        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
-        app:layout_constraintStart_toStartOf="@+id/viewSearch"
-        app:layout_constraintTop_toTopOf="@+id/viewSearch"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
