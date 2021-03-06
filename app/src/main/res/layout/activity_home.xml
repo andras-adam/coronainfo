@@ -96,21 +96,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed" />
 
+    <!-- TOTAL RECOVERED -->
+
     <TextView
         android:id="@+id/numberTotalConfirmed"
         android:layout_width="120dp"
         android:layout_height="17dp"
-        android:text="@string/number_placeholder"
+        android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalRecovered"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toEndOf="@+id/textTotalConfirmed"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed"
         app:layout_constraintVertical_bias="0.222" />
-
-    <!-- TOTAL RECOVERED -->
 
     <ProgressBar
         android:id="@+id/progressTotalRecovered"
@@ -144,7 +144,7 @@
         android:id="@+id/numberTotalRecovered"
         android:layout_width="118dp"
         android:layout_height="16dp"
-        android:text="@string/number_placeholder"
+        android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalDeaths"
@@ -189,7 +189,7 @@
         android:layout_width="116dp"
         android:layout_height="18dp"
         android:layout_marginTop="12dp"
-        android:text="@string/number_placeholder"
+        android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,10 +197,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
 
-    <!-- NEW CASES -->
+    <!-- LATEST CASES -->
 
     <View
-        android:id="@+id/viewNewCases"
+        android:id="@+id/viewStatistics"
         android:layout_width="300dp"
         android:layout_height="217dp"
         android:layout_marginTop="44dp"
@@ -213,98 +213,98 @@
         app:layout_constraintVertical_bias="0.758" />
 
     <TextView
-        android:id="@+id/textNewConfirmed"
+        android:id="@+id/textDeathRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_confirmed"
+        android:text="@string/latest_new_confirmed"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.308" />
 
     <TextView
-        android:id="@+id/textNewRecovered"
+        android:id="@+id/textRecoveryRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_recovered"
+        android:text="@string/latest_new_recovered"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.54" />
 
     <TextView
-        android:id="@+id/textNewDeaths"
+        android:id="@+id/textCasesPerMillion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_deaths"
+        android:text="@string/latest_new_deaths"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.762" />
 
     <TextView
-        android:id="@+id/numberNewRecovered"
+        android:id="@+id/numberRecoveryRate"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/number_placeholder"
+        android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.54" />
 
     <TextView
-        android:id="@+id/numberNewConfirmed"
+        android:id="@+id/numberDeathRate"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/number_placeholder"
+        android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.308" />
 
     <TextView
-        android:id="@+id/numberNewDeaths"
+        android:id="@+id/numberCasesPerMillion"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/number_placeholder"
+        android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         android:textColor="#CCFFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.762" />
 
     <TextView
-        android:id="@+id/textNewCases"
+        android:id="@+id/textStatistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_cases"
+        android:text="@string/latest_title"
         android:textColor="#CCFFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewNewCases"
-        app:layout_constraintEnd_toEndOf="@+id/viewNewCases"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatistics"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatistics"
         app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="@+id/viewNewCases"
-        app:layout_constraintTop_toTopOf="@+id/viewNewCases"
+        app:layout_constraintStart_toStartOf="@+id/viewStatistics"
+        app:layout_constraintTop_toTopOf="@+id/viewStatistics"
         app:layout_constraintVertical_bias="0.098" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

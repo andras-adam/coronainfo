@@ -34,9 +34,9 @@ public class HomeActivity extends AppCompatActivity {
         TextView totalConfirmed = findViewById(R.id.numberTotalConfirmed);
         TextView totalRecovered = findViewById(R.id.numberTotalRecovered);
         TextView totalDeaths = findViewById(R.id.numberTotalDeaths);
-        TextView newConfirmed = findViewById(R.id.numberNewConfirmed);
-        TextView newRecovered = findViewById(R.id.numberNewRecovered);
-        TextView newDeaths = findViewById(R.id.numberNewDeaths);
+        TextView newConfirmed = findViewById(R.id.numberDeathRate);
+        TextView newRecovered = findViewById(R.id.numberRecoveryRate);
+        TextView newDeaths = findViewById(R.id.numberCasesPerMillion);
 
         // Create decimal formatter
         DecimalFormat formatter = new DecimalFormat("#,###");
