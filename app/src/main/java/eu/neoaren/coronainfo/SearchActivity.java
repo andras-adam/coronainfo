@@ -1,4 +1,4 @@
-package eu.covidinfo.app;
+package eu.neoaren.coronainfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,11 +11,11 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import eu.covidinfo.app.data.CountryList;
+import eu.neoaren.coronainfo.data.CountryList;
 
 public class SearchActivity extends AppCompatActivity {
 
-    public static final String EXTRA_COUNTRY_CODE = "eu.covidinfo.app.EXTRA_COUNTRY_CODE";
+    public static final String EXTRA_COUNTRY_CODE = "eu.neoaren.coronainfo.EXTRA_COUNTRY_CODE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

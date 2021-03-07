@@ -1,4 +1,4 @@
-package eu.covidinfo.app.data;
+package eu.neoaren.coronainfo.data;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

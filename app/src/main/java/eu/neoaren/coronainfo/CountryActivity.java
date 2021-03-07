@@ -1,4 +1,4 @@
-package eu.covidinfo.app;
+package eu.neoaren.coronainfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-import eu.covidinfo.app.data.Country;
+import eu.neoaren.coronainfo.data.Country;
 
 public class CountryActivity extends AppCompatActivity {
 

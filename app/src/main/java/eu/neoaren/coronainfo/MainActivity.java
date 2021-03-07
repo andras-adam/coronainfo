@@ -1,4 +1,4 @@
-package eu.covidinfo.app;
+package eu.neoaren.coronainfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 

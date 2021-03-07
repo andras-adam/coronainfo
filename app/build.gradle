@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "eu.covidinfo.app"
+        applicationId "eu.neoaren.coronainfo"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
