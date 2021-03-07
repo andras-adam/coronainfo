@@ -73,10 +73,10 @@
         android:textAlignment="viewEnd"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalRecovered"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toEndOf="@+id/textTotalConfirmed"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalConfirmed"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.026" />
 
     <!-- TOTAL RECOVERED -->
 
@@ -116,10 +116,9 @@
         android:textAlignment="viewEnd"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalDeaths"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toEndOf="@+id/textTotalRecovered"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <!-- TOTAL DEATHS -->
 

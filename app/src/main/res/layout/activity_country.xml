@@ -102,7 +102,7 @@
         android:textAlignment="viewEnd"
         app:layout_constraintBottom_toTopOf="@+id/progressTotalDeaths"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toEndOf="@+id/textTotalRecovered"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalRecovered"
         app:layout_constraintVertical_bias="0.0" />
@@ -144,7 +144,7 @@
         android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintHorizontal_bias="0.808"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalDeaths" />
 
@@ -185,7 +185,7 @@
         android:text="@string/placeholder_number"
         android:textAlignment="viewEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTotalCritical" />
 
