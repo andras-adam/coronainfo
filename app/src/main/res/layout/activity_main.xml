@@ -5,37 +5,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="#2D3646"
     tools:context=".MainActivity">
 
     <!-- APP LOGO -->
 
-    <!-- APP TITLE -->
-
     <ImageView
         android:id="@+id/imageAppLogo"
-        android:layout_width="176dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="216dp"
+        android:layout_width="191dp"
+        android:layout_height="153dp"
         android:contentDescription="@string/app_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
         app:srcCompat="@drawable/planet_earth" />
+
+    <!-- APP TITLE -->
 
     <TextView
         android:id="@+id/textAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
         android:text="@string/app_name"
         android:textColor="#CCFFFFFF"
-        android:textSize="50sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.551" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
