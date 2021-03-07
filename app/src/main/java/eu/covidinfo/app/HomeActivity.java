@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void searchClickListener() {
-        View view = findViewById(R.id.viewSearch);
+        View view = findViewById(R.id.searchButton);
         view.setOnClickListener(target -> {
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);

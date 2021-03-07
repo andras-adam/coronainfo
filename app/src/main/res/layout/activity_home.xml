@@ -8,47 +8,6 @@
     android:background="#2D3646"
     tools:context=".CountryActivity">
 
-    <!-- SEARCHBAR -->
-
-    <View
-        android:id="@+id/viewSearch"
-        android:layout_width="296dp"
-        android:layout_height="45dp"
-        android:background="@drawable/bg_search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
-
-    <ImageView
-        android:id="@+id/iconSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/search_button"
-        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
-        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="@+id/viewSearch"
-        app:layout_constraintTop_toTopOf="@+id/viewSearch"
-        app:layout_constraintVertical_bias="0.523"
-        app:srcCompat="@drawable/ic_search_24px" />
-
-    <TextView
-        android:id="@+id/textSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_hint"
-        android:textColor="#99FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewSearch"
-        app:layout_constraintEnd_toEndOf="@+id/viewSearch"
-        app:layout_constraintHorizontal_bias="0.242"
-        app:layout_constraintStart_toStartOf="@+id/viewSearch"
-        app:layout_constraintTop_toTopOf="@+id/viewSearch"
-        app:layout_constraintVertical_bias="0.458" />
-
     <!-- SCREEN TITLE -->
 
     <TextView
@@ -60,9 +19,23 @@
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.049" />
+
+    <!-- SEARCH BUTTON -->
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_countries"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
 
     <!--  TOTAL CONFIRMED  -->
 
@@ -78,9 +51,10 @@
         android:progressTint="#65B9FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
 
     <TextView
         android:id="@+id/textTotalConfirmed"
@@ -123,9 +97,10 @@
         android:progressTint="#A6FF8D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
 
     <TextView
         android:id="@+id/textTotalRecovered"
@@ -168,9 +143,10 @@
         android:progressTint="#FF5B5B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textScreenTitle"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455" />
 
     <TextView
         android:id="@+id/textTotalDeaths"
@@ -213,7 +189,7 @@
         app:layout_constraintVertical_bias="0.758" />
 
     <TextView
-        android:id="@+id/textStatistics"
+        android:id="@+id/textLatest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/latest_title"
