@@ -35,7 +35,7 @@ public class CountryList {
     private void getDataFromAPI() {
 
         // API endpoint URL
-        String url = "https://restcountries.eu/rest/v2/all";
+        String url = "https://corona-api.com/countries";
 
         // Run API request
         JsonElement response = new Request(url).get();
@@ -44,12 +44,13 @@ public class CountryList {
         if (response != null) {
 
             // Extract useful data from response
-            JsonArray root = response.getAsJsonArray();
+            JsonObject root = response.getAsJsonObject();
+            JsonArray data = root.getAsJsonArray("data");
             List<Map.Entry<String, String>> list = new ArrayList<>();
-            for (JsonElement item : root) {
+            for (JsonElement item : data) {
                 JsonObject country = item.getAsJsonObject();
                 String name = country.get("name").getAsString();
-                String code = country.get("alpha2Code").getAsString().toLowerCase();
+                String code = country.get("code").getAsString();
                 list.add(new AbstractMap.SimpleEntry<>(code, name));
             }
 
