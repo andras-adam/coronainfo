@@ -21,6 +21,9 @@ Encountered some weird bugs, or have some cool ideas that you would like us to i
 ## iOS and other platforms
 *Coronainfo* was developed to run **solely on Android** devices, and ports for iOS and other platforms are not currently in development nor are they planned. However, feel free to let us know in the [issues](https://github.com/NeoAren/coronainfo/issues) page if you would like to see it happen.
 
+## Documentation
+Find the generated JavaDoc files in the `/docs` directory or view them in the browser by clicking [here](https://neoaren.github.io/coronainfo/).
+
 ##  Development
 *Coronainfo* was developed as a project work at Metropolia University of Applied Sciences as part of the Mobile Solutions course.
 
