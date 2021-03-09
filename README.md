@@ -1,4 +1,3 @@
-
 # Coronainfo 😷
 
 Get the latest COVID-19 statistics right to your smartphone!
