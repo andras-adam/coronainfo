@@ -3,6 +3,11 @@
 
 Get the latest COVID-19 statistics right to your smartphone!
 
+## Get started
+1. Find the apk file in the `/release` directory or by clicking [here](./release)
+2. Download and install `coronainfo.apk` on your Android device
+3. Enjoy the app!
+
 ## Features
 - *Coronainfo* provides reliable information from trustworthy sources about the state of the [COVID-19 pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) both globally and locally, supporting nearly all countries on Earth.
 - **Global statistics:** check total and recent number of confirmed cases, deaths and recoveries on a global scale
